@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7o3k0ijtqjno"]
+
+[ext_resource type="Script" path="res://CutVisHan.gd" id="1_gtocr"]
+
+[node name="CutVisHan" type="Node"]
+script = ExtResource("1_gtocr")

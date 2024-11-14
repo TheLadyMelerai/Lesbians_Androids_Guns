@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxa1hxg8hc42k"]
+
+[ext_resource type="Script" path="res://MenuHan.gd" id="1_2rl5i"]
+
+[node name="MenuHan" type="Node"]
+script = ExtResource("1_2rl5i")

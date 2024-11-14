@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds8ydvl1jcppg"]
+
+[ext_resource type="Script" path="res://HAMHan.gd" id="1_wjt5q"]
+
+[node name="HAMHan" type="Node"]
+script = ExtResource("1_wjt5q")

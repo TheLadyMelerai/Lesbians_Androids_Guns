@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxfwig4qf5scb"]
+
+[ext_resource type="Script" path="res://HAMAudHan.gd" id="1_mhk2l"]
+
+[node name="HAMAudHan" type="Node"]
+script = ExtResource("1_mhk2l")

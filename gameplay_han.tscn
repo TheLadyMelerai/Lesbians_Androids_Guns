@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyquhyp4ertdn"]
+
+[ext_resource type="Script" path="res://GameplayHan.gd" id="1_pkgsp"]
+
+[node name="GameplayHan" type="Node"]
+script = ExtResource("1_pkgsp")

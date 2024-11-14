@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://vwpdwsguf0e8"]
+
+[ext_resource type="Script" path="res://GameVisHan.gd" id="1_ffn3b"]
+
+[node name="GameVisHan" type="Node"]
+script = ExtResource("1_ffn3b")

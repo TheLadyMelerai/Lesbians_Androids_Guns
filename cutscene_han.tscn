@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dut7suldqpmb7"]
+
+[ext_resource type="Script" path="res://CutsceneHan.gd" id="1_egjop"]
+
+[node name="CutsceneHan" type="Node"]
+script = ExtResource("1_egjop")
