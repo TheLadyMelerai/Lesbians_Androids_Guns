@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxa1hxg8hc42k"]
+[gd_scene load_steps=4 format=3 uid="uid://bxa1hxg8hc42k"]
 
 [ext_resource type="Script" path="res://MenuHan.gd" id="1_2rl5i"]
+[ext_resource type="PackedScene" uid="uid://ckdamrnaubv1f" path="res://menu_vis_han.tscn" id="2_av3sk"]
+[ext_resource type="PackedScene" uid="uid://eq2tir0y2tg1" path="res://menu_aud_han.tscn" id="3_xhalj"]
 
 [node name="MenuHan" type="Node"]
 script = ExtResource("1_2rl5i")
+
+[node name="MenuVisHan" parent="." instance=ExtResource("2_av3sk")]
+
+[node name="MenuAudHan" parent="." instance=ExtResource("3_xhalj")]
+
+[connection signal="startGamePressed" from="MenuVisHan" to="." method="_on_menu_vis_han_start_game_pressed"]

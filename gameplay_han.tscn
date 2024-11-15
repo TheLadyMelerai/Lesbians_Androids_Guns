@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyquhyp4ertdn"]
+[gd_scene load_steps=5 format=3 uid="uid://cyquhyp4ertdn"]
 
 [ext_resource type="Script" path="res://GameplayHan.gd" id="1_pkgsp"]
+[ext_resource type="PackedScene" uid="uid://vwpdwsguf0e8" path="res://game_vis_han.tscn" id="2_wgv5n"]
+[ext_resource type="PackedScene" uid="uid://bb88kphjolsho" path="res://game_cha_han.tscn" id="3_chi8a"]
+[ext_resource type="PackedScene" uid="uid://cjthvjx6ig6q3" path="res://game_aud_han.tscn" id="4_qklxi"]
 
 [node name="GameplayHan" type="Node"]
 script = ExtResource("1_pkgsp")
+
+[node name="GameVisHan" parent="." instance=ExtResource("2_wgv5n")]
+
+[node name="GameChaHan" parent="." instance=ExtResource("3_chi8a")]
+
+[node name="GameAudHan" parent="." instance=ExtResource("4_qklxi")]

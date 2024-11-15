@@ -4,3 +4,40 @@
 
 [node name="MenuVisHan" type="Node"]
 script = ExtResource("1_8atm7")
+
+[node name="MainMenuBG" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OptionsBG" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CreditsBG" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TeamSplash" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StartGameB" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OptionsB" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CreditsB" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackB" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="StartGameB" to="." method="_on_start_game_b_pressed"]
+[connection signal="pressed" from="OptionsB" to="." method="_on_options_b_pressed"]
+[connection signal="pressed" from="CreditsB" to="." method="_on_credits_b_pressed"]
+[connection signal="pressed" from="BackB" to="." method="_on_back_b_pressed"]
