@@ -1,6 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://vwpdwsguf0e8"]
+[gd_scene load_steps=5 format=3 uid="uid://vwpdwsguf0e8"]
 
 [ext_resource type="Script" path="res://GameVisHan.gd" id="1_ffn3b"]
+[ext_resource type="Texture2D" uid="uid://ciiqqptr0k5sa" path="res://Art/Placeholder/Overworld_Background1_PLACEHOLDER.png" id="2_fxsro"]
+[ext_resource type="Texture2D" uid="uid://cc8kovcj5u8p7" path="res://Art/Placeholder/Overworld_Item_Altoids_PLACEHOLDER.png" id="3_r0mvg"]
+[ext_resource type="Texture2D" uid="uid://bag1a8pefn5dn" path="res://Art/Placeholder/Overworld_CRTCharacter_PLACEHOLDER.png" id="4_kx7ii"]
 
-[node name="GameVisHan" type="Node"]
+[node name="GameVisHan" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_ffn3b")
+
+[node name="Room1BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_fxsro")
+
+[node name="Macguffin1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1701.0
+offset_top = 82.0
+offset_right = 1821.0
+offset_bottom = 172.0
+texture = ExtResource("3_r0mvg")
+
+[node name="MonitorModel" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 64.0
+offset_right = 632.0
+offset_bottom = 244.0
+texture = ExtResource("4_kx7ii")

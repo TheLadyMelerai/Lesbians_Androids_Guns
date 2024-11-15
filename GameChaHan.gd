@@ -9,3 +9,16 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func setup():
+	pass
+
+func clearCha():
+	pass
+
+func displayCharacter(state):
+	match state:
+		0:
+			pass
+		1:
+			pass

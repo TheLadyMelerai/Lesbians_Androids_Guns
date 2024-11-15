@@ -17,7 +17,7 @@ func setup():
 	$HAMHan.setup()
 
 func startGame():
-	$CutsceneHan.playIntro()
+	self.cutToGameplay(0)
 
 func cutToGameplay(gameState):
 	$CutsceneHan.cleanUp()

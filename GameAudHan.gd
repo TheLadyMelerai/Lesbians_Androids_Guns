@@ -9,3 +9,23 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func setup():
+	pass
+
+func playTrack(state):
+	match state:
+		0:
+			pass
+		1:
+			pass
+		2:
+			pass
+		3:
+			pass
+		4:
+			pass
+
+func silenceAudio():
+	for n in self.get_children():
+		n.stop()

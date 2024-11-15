@@ -1,13 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckdamrnaubv1f"]
+[gd_scene load_steps=6 format=3 uid="uid://ckdamrnaubv1f"]
 
 [ext_resource type="Script" path="res://MenuVisHan.gd" id="1_8atm7"]
+[ext_resource type="Texture2D" uid="uid://ur8o44271h1j" path="res://Art/Placeholder/Main_Menu_PLACEHOLDER.png" id="2_kdbjw"]
+[ext_resource type="Texture2D" uid="uid://bc3kkpk83la53" path="res://Art/Placeholder/Button_Play_PLACEHOLDER.png" id="3_7pwk4"]
+[ext_resource type="Texture2D" uid="uid://bw4uvho00x04p" path="res://Art/Placeholder/Wings_of_Glass_Draft1.png" id="3_ac8ce"]
+[ext_resource type="Texture2D" uid="uid://bebwy3ln87ysv" path="res://Art/Placeholder/Button_Credits.png" id="4_c1npn"]
 
-[node name="MenuVisHan" type="Node"]
+[node name="MenuVisHan" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_8atm7")
 
 [node name="MainMenuBG" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("2_kdbjw")
 
 [node name="OptionsBG" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -18,20 +25,29 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TeamSplash" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 809.0
+offset_top = 420.0
+offset_right = 1065.0
+offset_bottom = 676.0
+texture = ExtResource("3_ac8ce")
 
 [node name="StartGameB" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 787.0
+offset_top = 772.0
+offset_right = 987.0
+offset_bottom = 872.0
+texture_normal = ExtResource("3_7pwk4")
 
 [node name="OptionsB" type="TextureButton" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="CreditsB" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1086.0
+offset_top = 772.0
+offset_right = 1286.0
+offset_bottom = 872.0
+texture_normal = ExtResource("4_c1npn")
 
 [node name="BackB" type="TextureButton" parent="."]
 offset_right = 40.0
