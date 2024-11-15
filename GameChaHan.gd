@@ -5,20 +5,15 @@ extends Node
 func _ready():
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func setup():
-	pass
+	$Character.setup($SpawnPoint.position)
 
 func clearCha():
-	pass
+	$Character.clearModel()
 
-func displayCharacter(state):
-	match state:
-		0:
-			pass
-		1:
-			pass
+func spawnCha():
+	$Character.enableCha($SpawnPoint.position)

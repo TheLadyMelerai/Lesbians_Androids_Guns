@@ -7,7 +7,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func setup():
@@ -22,5 +22,5 @@ func cleanUp():
 
 func startGameplay(state):
 	$GameVisHan.displayRoom(1)
-	$GameChaHan.displayCharacter(0)
+	$GameChaHan.spawnCha()
 	$GameAudHan.playTrack(0)
