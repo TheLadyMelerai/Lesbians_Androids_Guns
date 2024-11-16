@@ -45,3 +45,11 @@ func _on_gameplay_han_quit_to_menu():
 
 func _on_gameplay_han_quit_game():
 	quitGame.emit()
+
+func _on_gameplay_han_start_convo(convoID):
+	$GameplayHan.cleanUp()
+	$HAMHan.cleanUp()
+	$CutsceneHan.displayVisualNovel(convoID)
+
+func _on_cutscene_han_return_to_game():
+	startNewGame()

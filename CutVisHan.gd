@@ -5,7 +5,7 @@ signal returnToGame()
 var activeConvo
 var activeLine
 
-var convo0 = [["asdf", 0], ["asdf", 1]]
+var convo0 = [["Hi, Cordelia here!", 0], ["Hi, Mackenzie here!", 1]]
 var convo1 = [["asdf", 0], ["asdf", 1]]
 var convo2 = [["asdf", 0], ["asdf", 1]]
 
@@ -30,6 +30,7 @@ func clearScreen():
 func displayConvoScene(leftChar, rightChar):
 	show()
 	self.clearScreen()
+	print(rightChar)
 	$DialogBG.visible = true
 	$TextBacking.visible = true
 	if leftChar == 0:
@@ -80,9 +81,13 @@ func chooseActiveTalker(talkerID):
 
 func advanceDialog():
 	self.activeLine += 1
-	if activeLine < self.getActiveConvo(activeConvo).length:
+	if activeLine < self.getActiveConvo(activeConvo).size():
+		$DialogTextBox.clear()
 		$DialogTextBox.add_text(self.getActiveConvo(activeConvo)[activeLine][0])
 		chooseActiveTalker(self.getActiveConvo(activeConvo)[activeLine][1])
 	else:
 		cleanUp()
 		returnToGame.emit()
+
+func _on_continue_b_pressed():
+	advanceDialog()

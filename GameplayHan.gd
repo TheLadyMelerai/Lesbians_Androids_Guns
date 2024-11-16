@@ -2,6 +2,7 @@ extends Node
 
 signal quitToMenu()
 signal quitGame()
+signal startConvo(convoID)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -65,3 +66,6 @@ func _on_game_cha_han_enter_room_3e():
 
 func _on_game_cha_han_enter_room_4():
 	swapRoom(7)
+
+func _on_game_vis_han_ph_start_test_dialog():
+	startConvo.emit(0)

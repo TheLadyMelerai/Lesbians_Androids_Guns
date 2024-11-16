@@ -1,5 +1,6 @@
 extends Node
 
+signal returnToGame()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,6 +31,8 @@ func getConvoLeftChar(_convoID):
 
 func getConvoRightChar(convoID):
 	match convoID:
+		0:
+			return 1
 		1:
 			return 1
 		2:
@@ -54,3 +57,6 @@ func getConvoRightChar(convoID):
 			return 1
 		12:
 			return 1
+
+func _on_cut_vis_han_return_to_game():
+	returnToGame.emit()

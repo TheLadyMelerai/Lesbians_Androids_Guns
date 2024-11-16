@@ -20,4 +20,4 @@ shape = SubResource("RectangleShape2D_f5xla")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
-[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

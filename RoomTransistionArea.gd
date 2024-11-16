@@ -29,6 +29,6 @@ func disableRT():
 func getCenterPoint():
 	return $Marker2D.position
 
-func _on_area_shape_entered(_area_rid, _area, _area_shape_index, _local_shape_index):
+func _on_area_entered(area):
 	self.disableRT()
 	playerEnteredArea.emit()

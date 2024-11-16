@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://vwpdwsguf0e8"]
+[gd_scene load_steps=14 format=3 uid="uid://vwpdwsguf0e8"]
 
 [ext_resource type="Script" path="res://GameVisHan.gd" id="1_ffn3b"]
 [ext_resource type="Texture2D" uid="uid://b3l0s6byvuo8d" path="res://Art/Real/Rooms/Storage_Room_BG.png" id="2_cjjpb"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://b2t8w3fn5fjls" path="res://Art/Placeholder/Overworld_ArchiveMap_Maze_PLACEHOLDER.png" id="6_b72fm"]
 [ext_resource type="Texture2D" uid="uid://cwgij8xvlt1vy" path="res://Art/Placeholder/Overworld_CharchingHubMap_PLACEHOLDER.png" id="7_5xbpb"]
 [ext_resource type="Texture2D" uid="uid://cs5eqpcapgn76" path="res://Art/Placeholder/Button_Quit_PLACEHOLDER.png" id="11_rv3bg"]
+[ext_resource type="Texture2D" uid="uid://bbfdekhuid23f" path="res://Art/Placeholder/Arrow_Encounter_PLACEHOLDER.png" id="12_qmcuo"]
+[ext_resource type="Texture2D" uid="uid://bc3kkpk83la53" path="res://Art/Placeholder/Button_Play_PLACEHOLDER.png" id="13_w6eat"]
 
 [node name="GameVisHan" type="Control"]
 layout_mode = 3
@@ -95,5 +97,32 @@ offset_right = 218.0
 offset_bottom = 227.0
 texture_normal = ExtResource("11_rv3bg")
 
+[node name="PHGoTo0" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1672.0
+offset_top = 142.0
+offset_right = 1872.0
+offset_bottom = 242.0
+texture_normal = ExtResource("12_qmcuo")
+
+[node name="PHGoTo1" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1676.0
+offset_top = 22.0
+offset_right = 1876.0
+offset_bottom = 122.0
+texture_normal = ExtResource("11_rv3bg")
+
+[node name="PHStartDialog" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1689.0
+offset_top = 263.0
+offset_right = 1889.0
+offset_bottom = 363.0
+texture_normal = ExtResource("13_w6eat")
+
 [connection signal="pressed" from="PHMenu" to="." method="_on_ph_menu_pressed"]
 [connection signal="pressed" from="PHQuit" to="." method="_on_ph_quit_pressed"]
+[connection signal="pressed" from="PHGoTo0" to="." method="_on_ph_go_to_0_pressed"]
+[connection signal="pressed" from="PHGoTo1" to="." method="_on_ph_go_to_1_pressed"]
+[connection signal="pressed" from="PHStartDialog" to="." method="_on_ph_start_dialog_pressed"]
