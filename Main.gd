@@ -15,7 +15,13 @@ func initializeGameState():
 	$MenuHan.displayInitialScene()
 
 func _on_menu_han_start_game():
-	$GameHan.startGame()
+	$GameHan.startNewGame()
 
 func _on_game_han_quit_to_menu():
 	$MenuHan.displayMainMenu()
+
+func _on_menu_han_quit_game():
+	get_tree().quit()
+
+func _on_game_han_quit_game():
+	get_tree().quit()

@@ -1,6 +1,7 @@
 extends Node
 
 signal quitToMenu()
+signal quitGame()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,8 +17,10 @@ func setup():
 	$GameplayHan.setup()
 	$HAMHan.setup()
 
-func startGame():
-	self.cutToGameplay(0)
+func startNewGame():
+	$CutsceneHan.cleanUp()
+	$HAMHan.cleanUp()
+	$GameplayHan.startNewGame()
 
 func cutToGameplay(gameState):
 	$CutsceneHan.cleanUp()
@@ -34,3 +37,11 @@ func cutToHAM(gameState):
 	$GameplayHan.cleanUp()
 	$HAMHan.startHAM(gameState)
 
+func _on_gameplay_han_quit_to_menu():
+	$CutsceneHan.cleanUp()
+	$GameplayHan.cleanUp()
+	$HAMHan.cleanUp()
+	quitToMenu.emit()
+
+func _on_gameplay_han_quit_game():
+	quitGame.emit()

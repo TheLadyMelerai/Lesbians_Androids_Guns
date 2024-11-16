@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bb88kphjolsho"]
+[gd_scene load_steps=4 format=3 uid="uid://bb88kphjolsho"]
 
 [ext_resource type="Script" path="res://GameChaHan.gd" id="1_t33g1"]
 [ext_resource type="PackedScene" uid="uid://xtp2aufdpn7i" path="res://character.tscn" id="2_q8cm1"]
+[ext_resource type="PackedScene" uid="uid://bcpcc2o4p1msj" path="res://room_transistion_area.tscn" id="3_4m3aw"]
 
 [node name="GameChaHan" type="Node"]
 script = ExtResource("1_t33g1")
@@ -9,4 +10,58 @@ script = ExtResource("1_t33g1")
 [node name="Character" parent="." instance=ExtResource("2_q8cm1")]
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(500, 500)
+position = Vector2(800, 800)
+
+[node name="RT0R1L" parent="." instance=ExtResource("3_4m3aw")]
+
+[node name="Marker2D" parent="RT0R1L" index="2"]
+position = Vector2(1900, 600)
+
+[node name="SP0FR" type="Marker2D" parent="."]
+position = Vector2(1850, 600)
+
+[node name="RT1L0R" parent="." instance=ExtResource("3_4m3aw")]
+
+[node name="Marker2D" parent="RT1L0R" index="2"]
+position = Vector2(20, 600)
+
+[node name="SP1FL" type="Marker2D" parent="."]
+position = Vector2(70, 600)
+
+[node name="RT1R1eL" parent="." instance=ExtResource("3_4m3aw")]
+
+[node name="Marker2D" parent="RT1R1eL" index="2"]
+position = Vector2(1900, 600)
+
+[node name="SP1eFL" type="Marker2D" parent="."]
+position = Vector2(70, 600)
+
+[node name="RT1eL1R" parent="." instance=ExtResource("3_4m3aw")]
+
+[node name="Marker2D" parent="RT1eL1R" index="2"]
+position = Vector2(20, 600)
+
+[node name="SP1FR" type="Marker2D" parent="."]
+position = Vector2(1850, 600)
+
+[node name="RT1U2D" parent="." instance=ExtResource("3_4m3aw")]
+
+[node name="SP2FD" type="Marker2D" parent="."]
+
+[node name="RT2D1U" parent="." instance=ExtResource("3_4m3aw")]
+
+[node name="SP1FU" type="Marker2D" parent="."]
+
+[connection signal="playerEnteredArea" from="RT0R1L" to="." method="_on_rt_0r_1l_player_entered_area"]
+[connection signal="playerEnteredArea" from="RT1L0R" to="." method="_on_rt_1l_0r_player_entered_area"]
+[connection signal="playerEnteredArea" from="RT1R1eL" to="." method="_on_rt_1r_1e_l_player_entered_area"]
+[connection signal="playerEnteredArea" from="RT1eL1R" to="." method="_on_rt_1e_l_1r_player_entered_area"]
+[connection signal="playerEnteredArea" from="RT1U2D" to="." method="_on_rt_1u_2d_player_entered_area"]
+[connection signal="playerEnteredArea" from="RT2D1U" to="." method="_on_rt_2d_1u_player_entered_area"]
+
+[editable path="RT0R1L"]
+[editable path="RT1L0R"]
+[editable path="RT1R1eL"]
+[editable path="RT1eL1R"]
+[editable path="RT1U2D"]
+[editable path="RT2D1U"]

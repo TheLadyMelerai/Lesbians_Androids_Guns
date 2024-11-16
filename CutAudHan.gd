@@ -9,3 +9,18 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
+
+func setup():
+	pass
+
+func cleanUp():
+	pass
+
+func playConvoAudio(convoID):
+	match convoID:
+		0:
+			pass
+		1:
+			pass
+		2:
+			pass

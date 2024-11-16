@@ -13,3 +13,14 @@ script = ExtResource("1_pkgsp")
 [node name="GameChaHan" parent="." instance=ExtResource("3_chi8a")]
 
 [node name="GameAudHan" parent="." instance=ExtResource("4_qklxi")]
+
+[connection signal="PHMenuP" from="GameVisHan" to="." method="_on_game_vis_han_ph_menu_p"]
+[connection signal="PHQuitP" from="GameVisHan" to="." method="_on_game_vis_han_ph_quit_p"]
+[connection signal="enterRoom0" from="GameChaHan" to="." method="_on_game_cha_han_enter_room_0"]
+[connection signal="enterRoom1" from="GameChaHan" to="." method="_on_game_cha_han_enter_room_1"]
+[connection signal="enterRoom1e" from="GameChaHan" to="." method="_on_game_cha_han_enter_room_1e"]
+[connection signal="enterRoom2" from="GameChaHan" to="." method="_on_game_cha_han_enter_room_2"]
+[connection signal="enterRoom2e" from="GameChaHan" to="." method="_on_game_cha_han_enter_room_2e"]
+[connection signal="enterRoom3" from="GameChaHan" to="." method="_on_game_cha_han_enter_room_3"]
+[connection signal="enterRoom3e" from="GameChaHan" to="." method="_on_game_cha_han_enter_room_3e"]
+[connection signal="enterRoom4" from="GameChaHan" to="." method="_on_game_cha_han_enter_room_4"]

@@ -11,4 +11,5 @@ script = ExtResource("1_2rl5i")
 
 [node name="MenuAudHan" parent="." instance=ExtResource("3_xhalj")]
 
+[connection signal="quitGamePressed" from="MenuVisHan" to="." method="_on_menu_vis_han_quit_game_pressed"]
 [connection signal="startGamePressed" from="MenuVisHan" to="." method="_on_menu_vis_han_start_game_pressed"]

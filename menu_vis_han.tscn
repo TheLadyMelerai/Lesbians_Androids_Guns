@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckdamrnaubv1f"]
+[gd_scene load_steps=9 format=3 uid="uid://ckdamrnaubv1f"]
 
 [ext_resource type="Script" path="res://MenuVisHan.gd" id="1_8atm7"]
 [ext_resource type="Texture2D" uid="uid://ur8o44271h1j" path="res://Art/Placeholder/Main_Menu_PLACEHOLDER.png" id="2_kdbjw"]
 [ext_resource type="Texture2D" uid="uid://bc3kkpk83la53" path="res://Art/Placeholder/Button_Play_PLACEHOLDER.png" id="3_7pwk4"]
 [ext_resource type="Texture2D" uid="uid://bw4uvho00x04p" path="res://Art/Placeholder/Wings_of_Glass_Draft1.png" id="3_ac8ce"]
+[ext_resource type="Texture2D" uid="uid://c5g348xwbu1yq" path="res://Art/Placeholder/CreditsBG_PLACEHOLDER.png" id="3_ncfpc"]
 [ext_resource type="Texture2D" uid="uid://bebwy3ln87ysv" path="res://Art/Placeholder/Button_Credits.png" id="4_c1npn"]
+[ext_resource type="Texture2D" uid="uid://cxpmdglr3k1qo" path="res://Art/Placeholder/Button_Menu_PLACEHOLDER.png" id="7_l071p"]
+[ext_resource type="Texture2D" uid="uid://cs5eqpcapgn76" path="res://Art/Placeholder/Button_Quit_PLACEHOLDER.png" id="8_oq72m"]
 
 [node name="MenuVisHan" type="Control"]
 layout_mode = 3
@@ -21,8 +24,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="CreditsBG" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 426.0
+offset_top = 45.0
+offset_right = 1426.0
+offset_bottom = 1045.0
+texture = ExtResource("3_ncfpc")
 
 [node name="TeamSplash" type="TextureRect" parent="."]
 offset_left = 809.0
@@ -50,10 +56,22 @@ offset_bottom = 872.0
 texture_normal = ExtResource("4_c1npn")
 
 [node name="BackB" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 849.0
+offset_top = 920.0
+offset_right = 1049.0
+offset_bottom = 1020.0
+texture_normal = ExtResource("7_l071p")
+
+[node name="QuitB" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 776.0
+offset_right = 691.0
+offset_bottom = 876.0
+texture_normal = ExtResource("8_oq72m")
 
 [connection signal="pressed" from="StartGameB" to="." method="_on_start_game_b_pressed"]
 [connection signal="pressed" from="OptionsB" to="." method="_on_options_b_pressed"]
 [connection signal="pressed" from="CreditsB" to="." method="_on_credits_b_pressed"]
 [connection signal="pressed" from="BackB" to="." method="_on_back_b_pressed"]
+[connection signal="pressed" from="QuitB" to="." method="_on_quit_b_pressed"]

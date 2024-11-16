@@ -42,12 +42,12 @@ func enableCha(pos):
 	position = pos
 	show()
 	self.displayModel(2)
-	$BoundaryBox.disabled = false
+	$BoundaryBox.set_deferred("disabled", false)
 
 func disableCha():
 	self.clearModel()
 	hide()
-	$BoundaryBox.disabled = true
+	$BoundaryBox.set_deferred("disabled", true)
 
 func displayModel(state):
 	self.clearModel()
@@ -66,3 +66,8 @@ func clearModel():
 	$ModelLeft.visible = false
 	$ModelRight.visible = false
 	$ModelLeft.visible = false
+
+func moveModel(pos):
+	self.disableCha()
+	self.enableCha(pos)
+	print("Moving Char to ", pos.x, " ", pos.y)

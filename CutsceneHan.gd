@@ -11,7 +11,46 @@ func _process(_delta):
 	pass
 
 func setup():
-	pass
+	$CutVisHan.setup()
+	$CutAudHan.setup()
 
 func cleanUp():
-	pass
+	$CutVisHan.cleanUp()
+	$CutAudHan.cleanUp()
+
+func displayVisualNovel(convoID):
+	var leftChar = self.getConvoLeftChar(convoID)
+	var rightChar = self.getConvoRightChar(convoID)
+	$CutVisHan.displayConvoScene(leftChar, rightChar)
+	$CutAudHan.playConvoAudio(convoID)
+	$CutVisHan.displayDialog(convoID)
+
+func getConvoLeftChar(_convoID):
+	return 0
+
+func getConvoRightChar(convoID):
+	match convoID:
+		1:
+			return 1
+		2:
+			return 1
+		3:
+			return 1
+		4:
+			return 1
+		5:
+			return 1
+		6:
+			return 1
+		7:
+			return 1
+		8:
+			return 1
+		9:
+			return 1
+		10:
+			return 1
+		11:
+			return 1
+		12:
+			return 1

@@ -11,5 +11,7 @@ script = ExtResource("1_5v340")
 
 [node name="GameHan" parent="." instance=ExtResource("3_qtpl1")]
 
+[connection signal="quitGame" from="MenuHan" to="." method="_on_menu_han_quit_game"]
 [connection signal="startGame" from="MenuHan" to="." method="_on_menu_han_start_game"]
+[connection signal="quitGame" from="GameHan" to="." method="_on_game_han_quit_game"]
 [connection signal="quitToMenu" from="GameHan" to="." method="_on_game_han_quit_to_menu"]

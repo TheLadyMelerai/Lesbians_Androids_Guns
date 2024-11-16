@@ -1,6 +1,89 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7o3k0ijtqjno"]
+[gd_scene load_steps=5 format=3 uid="uid://c7o3k0ijtqjno"]
 
 [ext_resource type="Script" path="res://CutVisHan.gd" id="1_gtocr"]
+[ext_resource type="Texture2D" uid="uid://13wrdtxf56jj" path="res://Art/Placeholder/BlackBG_PLACEHOLDER.png" id="2_2wh1r"]
+[ext_resource type="Texture2D" uid="uid://bwayhmxf2r5hf" path="res://Art/Placeholder/Overworld_Dialoguebox_PLACEHOLDER.png" id="3_el7a2"]
+[ext_resource type="Texture2D" uid="uid://1eu31fbjbptw" path="res://Art/Placeholder/Overworld_Player_Down_PLACEHOLDER.png" id="4_8856s"]
 
-[node name="CutVisHan" type="Node"]
+[node name="CutVisHan" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_gtocr")
+
+[node name="DialogBG" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_2wh1r")
+
+[node name="TextBacking" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 600.0
+offset_right = 1760.0
+offset_bottom = 1000.0
+texture = ExtResource("3_el7a2")
+
+[node name="Nameplate0" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Nameplate1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Nameplate2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Nameplate3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogTextBox" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 680.0
+offset_right = 1710.0
+offset_bottom = 980.0
+text = "asdf"
+
+[node name="Sprite0" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 100.0
+offset_right = 590.0
+offset_bottom = 572.0
+texture = ExtResource("4_8856s")
+
+[node name="Sprite1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1184.0
+offset_top = 96.0
+offset_right = 1404.0
+offset_bottom = 579.0
+texture = ExtResource("4_8856s")
+
+[node name="Sprite2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1142.0
+offset_top = 187.0
+offset_right = 1345.0
+offset_bottom = 575.0
+texture = ExtResource("4_8856s")
+
+[node name="Sprite3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1339.0
+offset_top = 53.0
+offset_right = 1616.0
+offset_bottom = 578.0
+texture = ExtResource("4_8856s")
+
+[node name="ContinueB" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

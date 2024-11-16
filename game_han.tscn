@@ -13,3 +13,6 @@ script = ExtResource("1_1qpej")
 [node name="GameplayHan" parent="." instance=ExtResource("3_1lkvf")]
 
 [node name="HAMHan" parent="." instance=ExtResource("4_i6wmr")]
+
+[connection signal="quitGame" from="GameplayHan" to="." method="_on_gameplay_han_quit_game"]
+[connection signal="quitToMenu" from="GameplayHan" to="." method="_on_gameplay_han_quit_to_menu"]

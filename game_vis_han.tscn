@@ -1,20 +1,67 @@
-[gd_scene load_steps=5 format=3 uid="uid://vwpdwsguf0e8"]
+[gd_scene load_steps=12 format=3 uid="uid://vwpdwsguf0e8"]
 
 [ext_resource type="Script" path="res://GameVisHan.gd" id="1_ffn3b"]
+[ext_resource type="Texture2D" uid="uid://b3l0s6byvuo8d" path="res://Art/Real/Rooms/Storage_Room_BG.png" id="2_cjjpb"]
 [ext_resource type="Texture2D" uid="uid://ciiqqptr0k5sa" path="res://Art/Placeholder/Overworld_Background1_PLACEHOLDER.png" id="2_fxsro"]
 [ext_resource type="Texture2D" uid="uid://cc8kovcj5u8p7" path="res://Art/Placeholder/Overworld_Item_Altoids_PLACEHOLDER.png" id="3_r0mvg"]
+[ext_resource type="Texture2D" uid="uid://dxkjfa13rpg4j" path="res://Art/Placeholder/Overworld_MainframeMap_Maze_PLACEHOLDER.png" id="4_hua64"]
 [ext_resource type="Texture2D" uid="uid://bag1a8pefn5dn" path="res://Art/Placeholder/Overworld_CRTCharacter_PLACEHOLDER.png" id="4_kx7ii"]
+[ext_resource type="Texture2D" uid="uid://cxpmdglr3k1qo" path="res://Art/Placeholder/Button_Menu_PLACEHOLDER.png" id="5_abhef"]
+[ext_resource type="Texture2D" uid="uid://bsm7o4oyxyc4b" path="res://Art/Placeholder/Overworld_ArchiveMap_PLACEHOLDER.png" id="5_he0pg"]
+[ext_resource type="Texture2D" uid="uid://b2t8w3fn5fjls" path="res://Art/Placeholder/Overworld_ArchiveMap_Maze_PLACEHOLDER.png" id="6_b72fm"]
+[ext_resource type="Texture2D" uid="uid://cwgij8xvlt1vy" path="res://Art/Placeholder/Overworld_CharchingHubMap_PLACEHOLDER.png" id="7_5xbpb"]
+[ext_resource type="Texture2D" uid="uid://cs5eqpcapgn76" path="res://Art/Placeholder/Button_Quit_PLACEHOLDER.png" id="11_rv3bg"]
 
 [node name="GameVisHan" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_ffn3b")
 
+[node name="Room0BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_cjjpb")
+
 [node name="Room1BG" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_fxsro")
+
+[node name="Room1eBG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_hua64")
+
+[node name="Room2BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_he0pg")
+
+[node name="Room2eBG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_b72fm")
+
+[node name="Room3BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Room3eBG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Room4BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_5xbpb")
 
 [node name="Macguffin1" type="TextureRect" parent="."]
 layout_mode = 0
@@ -31,3 +78,22 @@ offset_top = 64.0
 offset_right = 632.0
 offset_bottom = 244.0
 texture = ExtResource("4_kx7ii")
+
+[node name="PHMenu" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 15.0
+offset_right = 216.0
+offset_bottom = 115.0
+texture_normal = ExtResource("5_abhef")
+
+[node name="PHQuit" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 127.0
+offset_right = 218.0
+offset_bottom = 227.0
+texture_normal = ExtResource("11_rv3bg")
+
+[connection signal="pressed" from="PHMenu" to="." method="_on_ph_menu_pressed"]
+[connection signal="pressed" from="PHQuit" to="." method="_on_ph_quit_pressed"]

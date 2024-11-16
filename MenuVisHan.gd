@@ -1,6 +1,7 @@
 extends Control
 
 signal startGamePressed()
+signal quitGamePressed()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,6 +25,7 @@ func displayMenuScene(state):
 			$StartGameB.visible = true
 			$OptionsB.visible = true
 			$CreditsB.visible = true
+			$QuitB.visible = true
 		2:
 			$OptionsBG.visible = true
 			$BackB.visible = true
@@ -61,3 +63,6 @@ func _on_credits_b_pressed():
 
 func _on_back_b_pressed():
 	self.displayMainMenu()
+
+func _on_quit_b_pressed():
+	quitGamePressed.emit()

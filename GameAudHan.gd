@@ -13,8 +13,8 @@ func _process(_delta):
 func setup():
 	pass
 
-func playTrack(state):
-	match state:
+func playTrack(trackCode):
+	match trackCode:
 		0:
 			pass
 		1:
@@ -24,6 +24,31 @@ func playTrack(state):
 		3:
 			pass
 		4:
+			pass
+		5:
+			pass
+		6:
+			pass
+		7:
+			pass
+
+func playRoomTrack(roomCode):
+	match roomCode:
+		0:
+			pass
+		1:
+			pass
+		2:
+			pass
+		3:
+			pass
+		4:
+			pass
+		5:
+			pass
+		6:
+			pass
+		7:
 			pass
 
 func silenceAudio():

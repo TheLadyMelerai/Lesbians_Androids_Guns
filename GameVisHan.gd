@@ -1,5 +1,7 @@
 extends Control
 
+signal PHMenuP()
+signal PHQuitP()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,14 +23,42 @@ func displayRoom(state):
 	clearScreen()
 	match state:
 		0:
-			pass
+			$Room0BG.visible = true
+			$PHMenu.visible = true
+			$PHQuit.visible = true
 		1:
 			$Room1BG.visible = true
 			$Macguffin1.visible = true
 			$MonitorModel.visible = true
+			$PHMenu.visible = true
+			$PHQuit.visible = true
 		2:
-			pass
+			$Room1eBG.visible = true
+			$PHMenu.visible = true
+			$PHQuit.visible = true
 		3:
-			pass
+			$Room2BG.visible = true
+			$PHMenu.visible = true
+			$PHQuit.visible = true
 		4:
-			pass
+			$Room2eBG.visible = true
+			$PHMenu.visible = true
+			$PHQuit.visible = true
+		5:
+			$Room3BG.visible = true
+			$PHMenu.visible = true
+			$PHQuit.visible = true
+		6:
+			$Room3eBG.visible = true
+			$PHMenu.visible = true
+			$PHQuit.visible = true
+		7:
+			$Room4BG.visible = true
+			$PHMenu.visible = true
+			$PHQuit.visible = true
+
+func _on_ph_menu_pressed():
+	PHMenuP.emit()
+
+func _on_ph_quit_pressed():
+	PHQuitP.emit()

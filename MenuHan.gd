@@ -1,6 +1,7 @@
 extends Node
 
 signal startGame()
+signal quitGame()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,7 +18,7 @@ func setup():
 func displayInitialScene():
 	$MenuVisHan.displayTeamSplash()
 	$MenuAudHan.playTeamSplash()
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	self.displayMainMenu()
 
 func displayMainMenu():
@@ -34,3 +35,6 @@ func _on_menu_vis_han_start_game_pressed():
 	$MenuVisHan.cleanUp()
 	$MenuAudHan.cleanUp()
 	startGame.emit()
+
+func _on_menu_vis_han_quit_game_pressed():
+	quitGame.emit()
