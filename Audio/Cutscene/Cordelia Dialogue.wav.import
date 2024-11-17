@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bt42a360wg3hr"
+path="res://.godot/imported/Cordelia Dialogue.wav-beb56ee6f0a647100dc20b9e9c9ca874.sample"
+
+[deps]
+
+source_file="res://Audio/Cutscene/Cordelia Dialogue.wav"
+dest_files=["res://.godot/imported/Cordelia Dialogue.wav-beb56ee6f0a647100dc20b9e9c9ca874.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

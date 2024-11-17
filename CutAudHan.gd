@@ -24,3 +24,15 @@ func playConvoAudio(convoID):
 			pass
 		2:
 			pass
+
+func playCordBark():
+	$CordBark.play()
+
+func playMackBark():
+	$MackBark.play()
+
+func playAmieBark():
+	$AmieBark.play()
+
+func playCuriBark():
+	$CuriBark.play()

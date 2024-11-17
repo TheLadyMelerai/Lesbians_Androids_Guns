@@ -11,4 +11,8 @@ script = ExtResource("1_egjop")
 
 [node name="CutAudHan" parent="." instance=ExtResource("3_7a5w4")]
 
+[connection signal="amieBark" from="CutVisHan" to="." method="_on_cut_vis_han_amie_bark"]
+[connection signal="cordBark" from="CutVisHan" to="." method="_on_cut_vis_han_cord_bark"]
+[connection signal="curiBark" from="CutVisHan" to="." method="_on_cut_vis_han_curi_bark"]
+[connection signal="mackBark" from="CutVisHan" to="." method="_on_cut_vis_han_mack_bark"]
 [connection signal="returnToGame" from="CutVisHan" to="." method="_on_cut_vis_han_return_to_game"]

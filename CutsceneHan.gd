@@ -60,3 +60,15 @@ func getConvoRightChar(convoID):
 
 func _on_cut_vis_han_return_to_game():
 	returnToGame.emit()
+
+func _on_cut_vis_han_cord_bark():
+	$CutAudHan.playCordBark()
+
+func _on_cut_vis_han_mack_bark():
+	$CutAudHan.playMackBark()
+
+func _on_cut_vis_han_amie_bark():
+	$CutAudHan.playAmieBark()
+
+func _on_cut_vis_han_curi_bark():
+	$CutAudHan.playCuriBark()

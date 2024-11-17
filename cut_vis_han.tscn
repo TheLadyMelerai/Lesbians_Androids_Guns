@@ -32,37 +32,37 @@ texture = ExtResource("3_el7a2")
 
 [node name="Nameplate0" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 172.0
-offset_top = 615.0
-offset_right = 696.0
-offset_bottom = 706.0
+offset_left = 177.0
+offset_top = 618.0
+offset_right = 701.0
+offset_bottom = 709.0
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("4_5drya")
 
 [node name="Nameplate1" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 1354.0
-offset_top = 617.0
-offset_right = 1878.0
-offset_bottom = 708.0
+offset_left = 1349.0
+offset_top = 618.0
+offset_right = 1873.0
+offset_bottom = 709.0
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_s7c2e")
 
 [node name="Nameplate2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 1354.0
-offset_top = 614.0
-offset_right = 1878.0
-offset_bottom = 705.0
+offset_left = 1348.0
+offset_top = 618.0
+offset_right = 1872.0
+offset_bottom = 709.0
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("6_66no1")
 
 [node name="Nameplate3" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 1356.0
-offset_top = 614.0
-offset_right = 1880.0
-offset_bottom = 705.0
+offset_left = 1348.0
+offset_top = 618.0
+offset_right = 1872.0
+offset_bottom = 709.0
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("7_rqd0b")
 
@@ -72,7 +72,6 @@ offset_left = 210.0
 offset_top = 680.0
 offset_right = 1710.0
 offset_bottom = 980.0
-text = "asdf"
 
 [node name="Sprite0" type="TextureRect" parent="."]
 layout_mode = 0

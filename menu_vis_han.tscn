@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bc3kkpk83la53" path="res://Art/Placeholder/Button_Play_PLACEHOLDER.png" id="3_7pwk4"]
 [ext_resource type="Texture2D" uid="uid://bw4uvho00x04p" path="res://Art/Placeholder/Wings_of_Glass_Draft1.png" id="3_ac8ce"]
 [ext_resource type="Texture2D" uid="uid://c5g348xwbu1yq" path="res://Art/Placeholder/CreditsBG_PLACEHOLDER.png" id="3_ncfpc"]
-[ext_resource type="Texture2D" uid="uid://bebwy3ln87ysv" path="res://Art/Placeholder/Button_Credits.png" id="4_c1npn"]
+[ext_resource type="Texture2D" path="res://Art/Placeholder/Button_Credits.png" id="4_c1npn"]
 [ext_resource type="Texture2D" uid="uid://cxpmdglr3k1qo" path="res://Art/Placeholder/Button_Menu_PLACEHOLDER.png" id="7_l071p"]
 [ext_resource type="Texture2D" uid="uid://cs5eqpcapgn76" path="res://Art/Placeholder/Button_Quit_PLACEHOLDER.png" id="8_oq72m"]
 

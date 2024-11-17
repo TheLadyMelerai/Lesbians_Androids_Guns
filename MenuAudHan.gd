@@ -17,6 +17,7 @@ func playTeamSplash():
 
 func playMainMenu():
 	self.silenceAudio()
+	$MainMenuTheme.play()
 
 func cleanUp():
 	self.silenceAudio()

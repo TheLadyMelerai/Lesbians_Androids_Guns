@@ -14,6 +14,7 @@ func setup():
 	pass
 
 func playTrack(trackCode):
+	silenceAudio()
 	match trackCode:
 		0:
 			pass
@@ -33,23 +34,24 @@ func playTrack(trackCode):
 			pass
 
 func playRoomTrack(roomCode):
+	silenceAudio()
 	match roomCode:
 		0:
-			pass
+			$Room0.play()
 		1:
-			pass
+			$Room1.play()
 		2:
-			pass
+			$Room1e.play()
 		3:
-			pass
+			$Room2.play()
 		4:
-			pass
+			$Room2e.play()
 		5:
-			pass
+			$Room3.play()
 		6:
-			pass
+			$Room3e.play()
 		7:
-			pass
+			$Room4.play()
 
 func silenceAudio():
 	for n in self.get_children():

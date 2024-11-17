@@ -27,7 +27,7 @@ func clearCha():
 
 func spawnCha():
 	$Character.enableCha($SpawnPoint.position)
-	$RT0R1L.enableRT()
+	#$RT0R1L.enableRT()
 
 func disableRoomTrans():
 	$RT0R1L.disableRT()
@@ -43,7 +43,7 @@ func moveRoomCha(newRoomCode, dirCode):
 	match newRoomCode:
 		0:
 			$Character.moveModel($SP0FR.position)
-			$RT0R1L.enableRT()
+			#$RT0R1L.enableRT()
 			print("Enter Room 0")
 		1:
 			if dirCode == 0:
@@ -52,13 +52,13 @@ func moveRoomCha(newRoomCode, dirCode):
 				$Character.moveModel($SP1FR.position)
 			elif dirCode == 2:
 				$Character.moveModel($SP1FU.position)
-			$RT1L0R.enableRT()
-			$RT1R1eL.enableRT()
-			$RT1U2D.enableRT()
+			#$RT1L0R.enableRT()
+			#$RT1R1eL.enableRT()
+			#$RT1U2D.enableRT()
 			print("Enter Room 1")
 		2:
 			$Character.moveModel($SP1eFL.position)
-			$RT1eL1R.enableRT()
+			#$RT1eL1R.enableRT()
 			print("Enter Room 1e")
 		3:
 			if dirCode == 0:
@@ -67,7 +67,7 @@ func moveRoomCha(newRoomCode, dirCode):
 				pass
 			elif  dirCode == 3:
 				$Character.moveModel($SP2FD.position)
-			$RT2D1U.enableRT()
+			#$RT2D1U.enableRT()
 			print("Enter Room 2")
 		4:
 			pass
