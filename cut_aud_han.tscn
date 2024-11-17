@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://CutAudHan.gd" id="1_u0rct"]
 [ext_resource type="AudioStream" uid="uid://bt42a360wg3hr" path="res://Audio/Cutscene/Cordelia Dialogue.wav" id="2_v8cy7"]
-[ext_resource type="AudioStream" uid="uid://c1mth2mufyd0j" path="res://Audio/Cutscene/Mackenzie Dialogue.wav" id="3_7j317"]
+[ext_resource type="AudioStream" uid="uid://dm623b3hi71ux" path="res://Audio/Cutscene/Mackenzie Dialogue Shortened.wav" id="3_awydm"]
 
 [node name="CutAudHan" type="Node"]
 script = ExtResource("1_u0rct")
@@ -11,7 +11,7 @@ script = ExtResource("1_u0rct")
 stream = ExtResource("2_v8cy7")
 
 [node name="MackBark" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_7j317")
+stream = ExtResource("3_awydm")
 
 [node name="AmieBark" type="AudioStreamPlayer" parent="."]
 

@@ -18,7 +18,7 @@ func setup():
 func displayInitialScene():
 	$MenuVisHan.displayTeamSplash()
 	$MenuAudHan.playTeamSplash()
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	self.displayMainMenu()
 
 func displayMainMenu():

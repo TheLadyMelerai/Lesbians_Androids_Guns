@@ -1,6 +1,7 @@
 extends Node
 
 signal returnToGame()
+signal goToMainMenu()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -58,8 +59,11 @@ func getConvoRightChar(convoID):
 		12:
 			return 1
 
-func _on_cut_vis_han_return_to_game():
-	returnToGame.emit()
+func _on_cut_vis_han_return_to_game(endFlag):
+	if endFlag == 1:
+		$CutVisHan.displayTBC()
+	else:
+		returnToGame.emit()
 
 func _on_cut_vis_han_cord_bark():
 	$CutAudHan.playCordBark()
@@ -72,3 +76,6 @@ func _on_cut_vis_han_amie_bark():
 
 func _on_cut_vis_han_curi_bark():
 	$CutAudHan.playCuriBark()
+
+func _on_cut_vis_han_go_to_main_menu():
+	goToMainMenu.emit()

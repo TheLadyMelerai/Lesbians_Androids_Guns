@@ -14,6 +14,7 @@ script = ExtResource("1_1qpej")
 
 [node name="HAMHan" parent="." instance=ExtResource("4_i6wmr")]
 
+[connection signal="goToMainMenu" from="CutsceneHan" to="." method="_on_cutscene_han_go_to_main_menu"]
 [connection signal="returnToGame" from="CutsceneHan" to="." method="_on_cutscene_han_return_to_game"]
 [connection signal="quitGame" from="GameplayHan" to="." method="_on_gameplay_han_quit_game"]
 [connection signal="quitToMenu" from="GameplayHan" to="." method="_on_gameplay_han_quit_to_menu"]

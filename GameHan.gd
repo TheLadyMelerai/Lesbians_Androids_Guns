@@ -7,7 +7,6 @@ signal quitGame()
 func _ready():
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
@@ -52,4 +51,10 @@ func _on_gameplay_han_start_convo(convoID):
 	$CutsceneHan.displayVisualNovel(convoID)
 
 func _on_cutscene_han_return_to_game():
-	startNewGame()
+	$GameplayHan.resumeGameplay()
+
+func _on_cutscene_han_go_to_main_menu():
+	$CutsceneHan.cleanUp()
+	$GameplayHan.cleanUp()
+	$HAMHan.cleanUp()
+	quitToMenu.emit()

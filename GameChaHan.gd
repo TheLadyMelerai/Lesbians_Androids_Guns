@@ -7,7 +7,8 @@ signal enterRoom2()
 signal enterRoom2e()
 signal enterRoom3()
 signal enterRoom3e()
-signal enterRoom4() 
+signal enterRoom4()
+signal interactPressed(pos) 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,6 +29,12 @@ func clearCha():
 func spawnCha():
 	$Character.enableCha($SpawnPoint.position)
 	#$RT0R1L.enableRT()
+
+func spawnChaAt(pos):
+	$Character.enableCha(pos)
+
+func spawnChaAtMack():
+	$Character.enableCha($MackSpawn.position)
 
 func disableRoomTrans():
 	$RT0R1L.disableRT()
@@ -107,3 +114,6 @@ func _on_rt_2d_1u_player_entered_area():
 	enterRoom1.emit()
 	moveRoomCha(1,2)
 	print("2d - 1u")
+
+func _on_character_interact_pressed(pos):
+	interactPressed.emit(pos)

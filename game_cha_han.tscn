@@ -1,8 +1,38 @@
-[gd_scene load_steps=4 format=3 uid="uid://bb88kphjolsho"]
+[gd_scene load_steps=14 format=3 uid="uid://bb88kphjolsho"]
 
 [ext_resource type="Script" path="res://GameChaHan.gd" id="1_t33g1"]
 [ext_resource type="PackedScene" uid="uid://xtp2aufdpn7i" path="res://character.tscn" id="2_q8cm1"]
 [ext_resource type="PackedScene" uid="uid://bcpcc2o4p1msj" path="res://room_transistion_area.tscn" id="3_4m3aw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nuq64"]
+size = Vector2(476, 261)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqpnx"]
+size = Vector2(1917, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfnjo"]
+size = Vector2(39, 1058)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wyn4y"]
+size = Vector2(238.25, 512)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nigk"]
+size = Vector2(238, 259)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6coeg"]
+size = Vector2(1917, 24.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbhaj"]
+size = Vector2(22.375, 1078)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_moqt3"]
+size = Vector2(953, 256.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2t11c"]
+size = Vector2(237.75, 505)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1e13"]
+size = Vector2(478.5, 253)
 
 [node name="GameChaHan" type="Node"]
 script = ExtResource("1_t33g1")
@@ -10,7 +40,10 @@ script = ExtResource("1_t33g1")
 [node name="Character" parent="." instance=ExtResource("2_q8cm1")]
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(800, 800)
+position = Vector2(114, 453)
+
+[node name="MackSpawn" type="Marker2D" parent="."]
+position = Vector2(620, 220)
 
 [node name="RT0R1L" parent="." instance=ExtResource("3_4m3aw")]
 
@@ -52,6 +85,49 @@ position = Vector2(1850, 600)
 
 [node name="SP1FU" type="Marker2D" parent="."]
 
+[node name="WallMap" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallMap"]
+position = Vector2(279, 163.5)
+shape = SubResource("RectangleShape2D_nuq64")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="WallMap"]
+position = Vector2(960.5, 16.5)
+shape = SubResource("RectangleShape2D_rqpnx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="WallMap"]
+position = Vector2(19.5, 554)
+shape = SubResource("RectangleShape2D_jfnjo")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="WallMap"]
+position = Vector2(1282.88, 296)
+shape = SubResource("RectangleShape2D_wyn4y")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="WallMap"]
+position = Vector2(1520, 164)
+shape = SubResource("RectangleShape2D_2nigk")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="WallMap"]
+position = Vector2(959.5, 1067)
+shape = SubResource("RectangleShape2D_6coeg")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="WallMap"]
+position = Vector2(1907, 540)
+shape = SubResource("RectangleShape2D_qbhaj")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="WallMap"]
+position = Vector2(545.5, 925.25)
+shape = SubResource("RectangleShape2D_moqt3")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="WallMap"]
+position = Vector2(668.125, 797.5)
+shape = SubResource("RectangleShape2D_2t11c")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="WallMap"]
+position = Vector2(1657.75, 925.5)
+shape = SubResource("RectangleShape2D_w1e13")
+
+[connection signal="interactPressed" from="Character" to="." method="_on_character_interact_pressed"]
 [connection signal="playerEnteredArea" from="RT0R1L" to="." method="_on_rt_0r_1l_player_entered_area"]
 [connection signal="playerEnteredArea" from="RT1L0R" to="." method="_on_rt_1l_0r_player_entered_area"]
 [connection signal="playerEnteredArea" from="RT1R1eL" to="." method="_on_rt_1r_1e_l_player_entered_area"]
@@ -59,6 +135,7 @@ position = Vector2(1850, 600)
 [connection signal="playerEnteredArea" from="RT1U2D" to="." method="_on_rt_1u_2d_player_entered_area"]
 [connection signal="playerEnteredArea" from="RT2D1U" to="." method="_on_rt_2d_1u_player_entered_area"]
 
+[editable path="Character"]
 [editable path="RT0R1L"]
 [editable path="RT1L0R"]
 [editable path="RT1R1eL"]

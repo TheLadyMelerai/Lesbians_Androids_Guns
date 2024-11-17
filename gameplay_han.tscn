@@ -31,3 +31,4 @@ script = ExtResource("1_pkgsp")
 [connection signal="enterRoom3" from="GameChaHan" to="." method="_on_game_cha_han_enter_room_3"]
 [connection signal="enterRoom3e" from="GameChaHan" to="." method="_on_game_cha_han_enter_room_3e"]
 [connection signal="enterRoom4" from="GameChaHan" to="." method="_on_game_cha_han_enter_room_4"]
+[connection signal="interactPressed" from="GameChaHan" to="." method="_on_game_cha_han_interact_pressed"]

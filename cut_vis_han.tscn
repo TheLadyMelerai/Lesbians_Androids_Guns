@@ -1,16 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://c7o3k0ijtqjno"]
+[gd_scene load_steps=14 format=3 uid="uid://c7o3k0ijtqjno"]
 
 [ext_resource type="Script" path="res://CutVisHan.gd" id="1_gtocr"]
 [ext_resource type="Texture2D" uid="uid://13wrdtxf56jj" path="res://Art/Placeholder/BlackBG_PLACEHOLDER.png" id="2_2wh1r"]
-[ext_resource type="Texture2D" uid="uid://bwayhmxf2r5hf" path="res://Art/Placeholder/Overworld_Dialoguebox_PLACEHOLDER.png" id="3_el7a2"]
-[ext_resource type="Texture2D" uid="uid://s5awu5pckcmo" path="res://Art/Placeholder/Dialogue_CordeliaNameplate_PLACEHOLDER.png" id="4_5drya"]
+[ext_resource type="Texture2D" uid="uid://bfhp0t1a08kdm" path="res://Art/Real/UI/Dialogue_TextBG_Light.png" id="3_63fk4"]
 [ext_resource type="Texture2D" uid="uid://1eu31fbjbptw" path="res://Art/Placeholder/Overworld_Player_Down_PLACEHOLDER.png" id="4_8856s"]
-[ext_resource type="Texture2D" uid="uid://b0qwi858iipf8" path="res://Art/Placeholder/Dialogue_MackenzieNameplate_PLACEHOLDER.png" id="5_s7c2e"]
+[ext_resource type="Texture2D" uid="uid://ciywu2xo43cum" path="res://Art/Real/UI/Dialogue_Cordelia_Nameplate_Light.png" id="4_awgit"]
+[ext_resource type="Texture2D" uid="uid://c4rf6q1my0umd" path="res://Art/Real/UI/Dialogue_Mackenzie_Nameplate_Light.png" id="5_uj1nv"]
 [ext_resource type="Texture2D" uid="uid://b31b1sx1b16xd" path="res://Art/Placeholder/Dialogue_AmieXNameplate_PLACEHOLDER.png" id="6_66no1"]
 [ext_resource type="Texture2D" uid="uid://bg4v1rfasnv8e" path="res://Art/Placeholder/Dialogue_CurieNameplate_PLACEHOLDER.png" id="7_rqd0b"]
-[ext_resource type="Texture2D" uid="uid://b8unqewu8rbxo" path="res://Art/Placeholder/Dialogue_Cordelia_PLACHOLDER.png" id="8_l51ge"]
-[ext_resource type="Texture2D" uid="uid://dwliirphne0rx" path="res://Art/Placeholder/Dialogue_Mackenzie_PLACEHOLDER.png" id="9_m12re"]
-[ext_resource type="Texture2D" uid="uid://bbfdekhuid23f" path="res://Art/Placeholder/Arrow_Encounter_PLACEHOLDER.png" id="11_ae75j"]
+[ext_resource type="Texture2D" uid="uid://bwaygt05t7i03" path="res://Art/Real/Sprites/Dialogue_Cordelia.png" id="8_x2s6j"]
+[ext_resource type="Texture2D" uid="uid://c1i486hjetygt" path="res://Art/Real/Sprites/Dialogue_Mackenzie.png" id="9_t6osv"]
+[ext_resource type="Texture2D" uid="uid://bppacgbnglvnx" path="res://Art/Real/UI/Dialogue_AdvanceButton_Light.png" id="11_t351o"]
+[ext_resource type="Texture2D" uid="uid://bl0cfblgaliey" path="res://Art/Real/Menu/Menu_ToBeContinued.png" id="12_jw1xp"]
+[ext_resource type="Texture2D" uid="uid://ncdju2hv5tsm" path="res://Art/Real/Menu/Menu_MainMenuButton.png" id="13_1yqh6"]
 
 [node name="CutVisHan" type="Control"]
 layout_mode = 3
@@ -18,6 +20,7 @@ anchors_preset = 0
 script = ExtResource("1_gtocr")
 
 [node name="DialogBG" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_2wh1r")
@@ -28,7 +31,7 @@ offset_left = 160.0
 offset_top = 600.0
 offset_right = 1760.0
 offset_bottom = 1000.0
-texture = ExtResource("3_el7a2")
+texture = ExtResource("3_63fk4")
 
 [node name="Nameplate0" type="TextureRect" parent="."]
 layout_mode = 0
@@ -37,7 +40,7 @@ offset_top = 618.0
 offset_right = 701.0
 offset_bottom = 709.0
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("4_5drya")
+texture = ExtResource("4_awgit")
 
 [node name="Nameplate1" type="TextureRect" parent="."]
 layout_mode = 0
@@ -46,7 +49,7 @@ offset_top = 618.0
 offset_right = 1873.0
 offset_bottom = 709.0
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("5_s7c2e")
+texture = ExtResource("5_uj1nv")
 
 [node name="Nameplate2" type="TextureRect" parent="."]
 layout_mode = 0
@@ -69,25 +72,25 @@ texture = ExtResource("7_rqd0b")
 [node name="DialogTextBox" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 210.0
-offset_top = 680.0
+offset_top = 693.0
 offset_right = 1710.0
 offset_bottom = 980.0
 
 [node name="Sprite0" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 155.0
-offset_top = 7.0
-offset_right = 792.0
-offset_bottom = 573.0
-texture = ExtResource("8_l51ge")
+offset_left = 45.0
+offset_top = 30.0
+offset_right = 682.0
+offset_bottom = 596.0
+texture = ExtResource("8_x2s6j")
 
 [node name="Sprite1" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 1118.0
-offset_top = 11.0
-offset_right = 1755.0
-offset_bottom = 571.0
-texture = ExtResource("9_m12re")
+offset_left = 1141.0
+offset_top = 73.0
+offset_right = 1778.0
+offset_bottom = 633.0
+texture = ExtResource("9_t6osv")
 
 [node name="Sprite2" type="TextureRect" parent="."]
 layout_mode = 0
@@ -107,11 +110,25 @@ texture = ExtResource("4_8856s")
 
 [node name="ContinueB" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1691.0
-offset_top = 960.0
-offset_right = 1891.0
-offset_bottom = 1060.0
-texture_normal = ExtResource("11_ae75j")
-flip_h = true
+offset_left = 1699.0
+offset_top = 871.0
+offset_right = 1902.0
+offset_bottom = 1050.0
+texture_normal = ExtResource("11_t351o")
+
+[node name="ToBeConBG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("12_jw1xp")
+
+[node name="MainMenu" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 703.0
+offset_top = 731.0
+offset_right = 1225.0
+offset_bottom = 820.0
+texture_normal = ExtResource("13_1yqh6")
 
 [connection signal="pressed" from="ContinueB" to="." method="_on_continue_b_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]

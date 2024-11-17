@@ -24,14 +24,20 @@ func cleanUp():
 	$GameAudHan.silenceAudio()
 
 func startNewGame():
-	$GameVisHan.displayRoom(0)
+	$GameVisHan.setup()
+	$GameVisHan.displayRoom(1)
 	$GameChaHan.spawnCha()
-	$GameAudHan.playRoomTrack(0)
+	$GameAudHan.playRoomTrack(1)
 
 func startGameplay(_state):
 	$GameVisHan.displayRoom(0)
 	$GameChaHan.spawnCha()
 	$GameAudHan.playRoomTrack(0)
+
+func resumeGameplay():
+	$GameVisHan.displayRoom($GameVisHan.getCurrentRoom())
+	$GameChaHan.spawnChaAtMack()
+	$GameAudHan.playRoomTrack($GameVisHan.getCurrentRoom())
 
 func swapRoom(newRoomCode):
 	$GameVisHan.displayRoom(newRoomCode)
@@ -95,3 +101,6 @@ func _on_game_vis_han_ph_start_test_dialog_1():
 
 func _on_game_vis_han_ph_start_test_dialog_2():
 	startConvo.emit(2)
+
+func _on_game_cha_han_interact_pressed(pos):
+	$GameVisHan.interact(pos)
