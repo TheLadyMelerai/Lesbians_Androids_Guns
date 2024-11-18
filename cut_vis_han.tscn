@@ -1,8 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://c7o3k0ijtqjno"]
+[gd_scene load_steps=16 format=3 uid="uid://c7o3k0ijtqjno"]
 
 [ext_resource type="Script" path="res://CutVisHan.gd" id="1_gtocr"]
 [ext_resource type="Texture2D" uid="uid://13wrdtxf56jj" path="res://Art/Placeholder/BlackBG_PLACEHOLDER.png" id="2_2wh1r"]
-[ext_resource type="Texture2D" uid="uid://bfhp0t1a08kdm" path="res://Art/Real/UI/Dialogue_TextBG_Light.png" id="3_63fk4"]
+[ext_resource type="Texture2D" uid="uid://bmbjmqnkcs3kf" path="res://Art/Real/UI/Dialogue_TextBox_V2.png" id="3_ajh2e"]
 [ext_resource type="Texture2D" uid="uid://1eu31fbjbptw" path="res://Art/Placeholder/Overworld_Player_Down_PLACEHOLDER.png" id="4_8856s"]
 [ext_resource type="Texture2D" uid="uid://ciywu2xo43cum" path="res://Art/Real/UI/Dialogue_Cordelia_Nameplate_Light.png" id="4_awgit"]
 [ext_resource type="Texture2D" uid="uid://c4rf6q1my0umd" path="res://Art/Real/UI/Dialogue_Mackenzie_Nameplate_Light.png" id="5_uj1nv"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://bppacgbnglvnx" path="res://Art/Real/UI/Dialogue_AdvanceButton_Light.png" id="11_t351o"]
 [ext_resource type="Texture2D" uid="uid://bl0cfblgaliey" path="res://Art/Real/Menu/Menu_ToBeContinued.png" id="12_jw1xp"]
 [ext_resource type="Texture2D" uid="uid://ncdju2hv5tsm" path="res://Art/Real/Menu/Menu_MainMenuButton.png" id="13_1yqh6"]
+[ext_resource type="Texture2D" uid="uid://cjjq0t5sgyypp" path="res://Art/Real/UI/Coming sooon.png" id="13_bondx"]
+[ext_resource type="Texture2D" uid="uid://bt4ul27tspltf" path="res://Art/Real/Menu/Menu_Bonus.png" id="15_4phxc"]
 
 [node name="CutVisHan" type="Control"]
 layout_mode = 3
@@ -31,50 +33,50 @@ offset_left = 160.0
 offset_top = 600.0
 offset_right = 1760.0
 offset_bottom = 1000.0
-texture = ExtResource("3_63fk4")
+texture = ExtResource("3_ajh2e")
 
 [node name="Nameplate0" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 177.0
-offset_top = 618.0
-offset_right = 701.0
-offset_bottom = 709.0
+offset_left = 178.0
+offset_top = 627.0
+offset_right = 702.0
+offset_bottom = 718.0
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("4_awgit")
 
 [node name="Nameplate1" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 1349.0
-offset_top = 618.0
+offset_top = 627.0
 offset_right = 1873.0
-offset_bottom = 709.0
+offset_bottom = 718.0
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_uj1nv")
 
 [node name="Nameplate2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 1348.0
-offset_top = 618.0
-offset_right = 1872.0
-offset_bottom = 709.0
+offset_left = 1349.0
+offset_top = 627.0
+offset_right = 1873.0
+offset_bottom = 718.0
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("6_66no1")
 
 [node name="Nameplate3" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 1348.0
-offset_top = 618.0
-offset_right = 1872.0
-offset_bottom = 709.0
+offset_left = 1349.0
+offset_top = 627.0
+offset_right = 1873.0
+offset_bottom = 718.0
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("7_rqd0b")
 
 [node name="DialogTextBox" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 210.0
-offset_top = 693.0
+offset_top = 744.0
 offset_right = 1710.0
-offset_bottom = 980.0
+offset_bottom = 1012.0
 
 [node name="Sprite0" type="TextureRect" parent="."]
 layout_mode = 0
@@ -122,13 +124,38 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("12_jw1xp")
 
-[node name="MainMenu" type="TextureButton" parent="."]
+[node name="ConceptArtBG" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 703.0
-offset_top = 731.0
-offset_right = 1225.0
-offset_bottom = 820.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("13_bondx")
+
+[node name="MainMenuB" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 705.0
+offset_top = 912.0
+offset_right = 1227.0
+offset_bottom = 1001.0
+texture_normal = ExtResource("13_1yqh6")
+
+[node name="ConceptArtB" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 705.0
+offset_top = 793.0
+offset_right = 1227.0
+offset_bottom = 882.0
+texture_normal = ExtResource("15_4phxc")
+
+[node name="MainMenuBB" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 821.0
+offset_top = 339.0
+offset_right = 1343.0
+offset_bottom = 428.0
+scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("13_1yqh6")
 
 [connection signal="pressed" from="ContinueB" to="." method="_on_continue_b_pressed"]
-[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="MainMenuB" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="ConceptArtB" to="." method="_on_concept_art_b_pressed"]
+[connection signal="pressed" from="MainMenuBB" to="." method="_on_main_menu_bb_pressed"]

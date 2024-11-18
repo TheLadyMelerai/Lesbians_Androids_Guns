@@ -40,7 +40,6 @@ func _physics_process(delta):
 	#	self.displayModel(2)
 	if Input.is_action_just_pressed("interact"):
 		interactPressed.emit(position)
-		print("Player POS X: ", position.x, ", Player POS Y: ", position.y)
 
 func setup(pos):
 	position = pos
@@ -62,15 +61,21 @@ func disableCha():
 
 func displayModel(dir):
 	self.clearModel()
+	$ModelDown.visible = true
 	if dir.y == 1:
+		self.clearModel()
 		$ModelDown.visible = true
-	elif dir.x == 1:
-		$ModelRight.visible = true
 	elif dir.y == -1:
+		self.clearModel()
 		$ModelUp.visible = true
+	if dir.x == 1:
+		self.clearModel()
+		$ModelRight.visible = true
 	elif dir.x == -1:
+		self.clearModel()
 		$ModelLeft.visible = true
-	else:
+	if dir.x == 0 and dir.y == 0:
+		self.clearModel()
 		$ModelDown.visible = true
 
 func clearModel():

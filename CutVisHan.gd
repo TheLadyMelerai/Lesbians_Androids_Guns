@@ -109,11 +109,24 @@ func advanceDialog():
 func displayTBC():
 	clearScreen()
 	$ToBeConBG.visible = true
-	$MainMenu.visible = true
+	$MainMenuB.visible = true
+	$ConceptArtB.visible = true
+
+func displayCA():
+	clearScreen()
+	$ConceptArtBG.visible = true
+	$MainMenuBB.visible = true
 
 func _on_continue_b_pressed():
 	advanceDialog()
 
 func _on_main_menu_pressed():
+	cleanUp()
+	goToMainMenu.emit()
+
+func _on_concept_art_b_pressed():
+	displayCA()
+
+func _on_main_menu_bb_pressed():
 	cleanUp()
 	goToMainMenu.emit()
