@@ -9,7 +9,7 @@ func _ready():
 	hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * speed
 	move_and_slide()
@@ -48,7 +48,7 @@ func setup(pos):
 	$BoundaryBox.visible = false
 
 func enableCha(pos):
-	position = pos
+	self.set_deferred("position", pos)
 	var downVec = Vector2i(0,-1)
 	show()
 	self.displayModel(downVec)

@@ -25,9 +25,9 @@ func cleanUp():
 
 func startNewGame():
 	$GameVisHan.setup()
-	$GameVisHan.displayRoom(1)
+	$GameVisHan.displayRoom(0)
 	$GameChaHan.spawnCha()
-	$GameAudHan.playRoomTrack(1)
+	$GameAudHan.playRoomTrack(0)
 
 func startGameplay(_state):
 	$GameVisHan.displayRoom(0)
