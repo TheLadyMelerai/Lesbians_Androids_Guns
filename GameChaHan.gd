@@ -66,20 +66,22 @@ func moveRoomCha(newRoomCode, dirCode):
 			print("Enter Room 1")
 			currentRoom = 1
 		2:
-			$Character.moveModel()
+			$Character.moveModel($Sp1eW.position)
 			print("Enter Room 1e")
 			currentRoom = 2
 		3:
 			if dirCode == 0:
-				pass
+				$Character.moveModel($Sp2W.position)
 			elif dirCode == 2:
-				pass
+				$Character.moveModel($Sp2N.position)
 			elif  dirCode == 3:
-				pass
+				$Character.moveModel($Sp2S.position)
 			print("Enter Room 2")
 			currentRoom = 3
 		4:
-			pass
+			$Character.moveModel($Sp2eE.position)
+			print("Enter Room 2e")
+			currentRoom = 4
 		5:
 			pass
 		6:
@@ -139,6 +141,14 @@ func enableInvsWall(roomID):
 
 func disableRTArea():
 	$RT0E.disableArea()
+	$RT1W.disableArea()
+	$RT1N.disableArea()
+	$RT1E.disableArea()
+	$RT1eW.disableArea()
+	$RT2S.disableArea()
+	$RT2W.disableArea()
+	$RT2N.disableArea()
+	$RT2eE.disableArea()
 
 func enableRTArea(roomID):
 	disableRTArea()
@@ -146,12 +156,49 @@ func enableRTArea(roomID):
 		0:
 			$RT0E.enableArea()
 		1:
+			$RT1W.enableArea()
+			$RT1N.enableArea()
+			$RT1E.enableArea()
+		2:
+			$RT1eW.enableArea()
+		3:
+			$RT2S.enableArea()
+			$RT2W.enableArea()
+			$RT2N.enableArea()
+		4:
+			$RT2eE.enableArea()
+		5:
+			pass
+		6:
+			pass
+		7:
 			pass
 
 func _on_character_interact_pressed(pos):
 	interactPressed.emit(pos)
 
+#DirCodes: 0=From Left, 1=From Right, 2=From Up, 3=From Down
 func _on_rt_0e_body_shape_entered(_body_rid, _body, _body_shape_index, _local_shape_index):
 	disableInvsWalls()
 	moveRoomCha(1, 0)
+	enterRoom1.emit()
+
+func _on_rt_1w_body_shape_entered(_body_rid, _body, _body_shape_index, _local_shape_index):
+	disableInvsWalls()
+	moveRoomCha(0, 1)
+	enterRoom0.emit()
+
+func _on_rt_1n_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	disableInvsWalls()
+	moveRoomCha(3, 3)
+	enterRoom2.emit()
+
+func _on_rt_1e_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	disableInvsWalls()
+	moveRoomCha(2, 0)
+	enterRoom1e.emit()
+
+func _on_rt_1e_w_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	disableInvsWalls()
+	moveRoomCha(1, 1)
 	enterRoom1.emit()

@@ -50,10 +50,10 @@ func displayRoom(state):
 			$Room0BG.visible = true
 			$PHMenu.visible = true
 			$PHQuit.visible = true
-			$PHGoTo0.visible = true
-			$PHGoTo1.visible = true
-			$PHGoTo1e.visible = true
-			$PHGoTo2.visible = true
+			#$PHGoTo0.visible = true
+			#$PHGoTo1.visible = true
+			#$PHGoTo1e.visible = true
+			#$PHGoTo2.visible = true
 			#$PHStartDialog.visible = true
 			#$PHStartDialog1.visible = true
 			#$PHStartDialog2.visible = true
@@ -82,10 +82,10 @@ func displayRoom(state):
 			$Herring4.visible = itemFlag4
 			$PHMenu.visible = true
 			$PHQuit.visible = true
-			$PHGoTo0.visible = true
-			$PHGoTo1.visible = true
-			$PHGoTo1e.visible = true
-			$PHGoTo2.visible = true
+			#$PHGoTo0.visible = true
+			#$PHGoTo1.visible = true
+			#$PHGoTo1e.visible = true
+			#$PHGoTo2.visible = true
 			#$PHStartDialog.visible = true
 			#$PHStartDialog1.visible = true
 			#$PHStartDialog2.visible = true
@@ -94,10 +94,10 @@ func displayRoom(state):
 			$Room2BG.visible = true
 			$PHMenu.visible = true
 			$PHQuit.visible = true
-			$PHGoTo0.visible = true
-			$PHGoTo1.visible = true
-			$PHGoTo1e.visible = true
-			$PHGoTo2.visible = true
+			#$PHGoTo0.visible = true
+			#$PHGoTo1.visible = true
+			#$PHGoTo1e.visible = true
+			#$PHGoTo2.visible = true
 			#$PHStartDialog.visible = true
 			#$PHStartDialog1.visible = true
 			#$PHStartDialog2.visible = true
@@ -106,29 +106,29 @@ func displayRoom(state):
 			$Room2eBG.visible = true
 			$PHMenu.visible = true
 			$PHQuit.visible = true
-			$PHGoTo0.visible = true
-			$PHGoTo1.visible = true
+			#$PHGoTo0.visible = true
+			#$PHGoTo1.visible = true
 			currentRoom = 4
 		5:
 			$Room3BG.visible = true
 			$PHMenu.visible = true
 			$PHQuit.visible = true
-			$PHGoTo0.visible = true
-			$PHGoTo1.visible = true
+			#$PHGoTo0.visible = true
+			#$PHGoTo1.visible = true
 			currentRoom = 5
 		6:
 			$Room3eBG.visible = true
 			$PHMenu.visible = true
 			$PHQuit.visible = true
-			$PHGoTo0.visible = true
-			$PHGoTo1.visible = true
+			#$PHGoTo0.visible = true
+			#$PHGoTo1.visible = true
 			currentRoom = 6
 		7:
 			$Room4BG.visible = true
 			$PHMenu.visible = true
 			$PHQuit.visible = true
-			$PHGoTo0.visible = true
-			$PHGoTo1.visible = true
+			#$PHGoTo0.visible = true
+			#$PHGoTo1.visible = true
 			currentRoom = 7
 
 func drawUI():

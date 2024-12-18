@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://b3l0s6byvuo8d" path="res://Art/Real/Rooms/Storage_Room_BG.png" id="2_cjjpb"]
 [ext_resource type="Texture2D" uid="uid://b40cio4jgj0vx" path="res://Art/Real/Rooms/Temp area 1 BG.png" id="3_n33pi"]
 [ext_resource type="Texture2D" uid="uid://b2uurd7hknutt" path="res://Art/Real/Rooms/Overworld_DoorClosed_EastWest.png" id="4_7k05w"]
-[ext_resource type="Texture2D" uid="uid://dxkjfa13rpg4j" path="res://Art/Placeholder/Overworld_MainframeMap_Maze_PLACEHOLDER.png" id="4_hua64"]
 [ext_resource type="Texture2D" uid="uid://bqs64t7fmjubv" path="res://Art/Real/Rooms/Archive_Room_BG.png" id="5_47hwm"]
 [ext_resource type="Texture2D" uid="uid://bk5qbvdl2hwyi" path="res://Art/Real/Rooms/Overworld_DoorClosed_NorthSouth.png" id="5_fmd56"]
-[ext_resource type="Texture2D" uid="uid://b2t8w3fn5fjls" path="res://Art/Placeholder/Overworld_ArchiveMap_Maze_PLACEHOLDER.png" id="6_b72fm"]
+[ext_resource type="Texture2D" uid="uid://bf21ruesjlvgf" path="res://Art/Real/Rooms/Mainframe_Room_2_BG.png" id="6_i6f5c"]
 [ext_resource type="Texture2D" uid="uid://dyswb800ol7xv" path="res://Art/Placeholder/Overworld_GardenMap_PLACEHOLDER.png" id="7_5vxnh"]
 [ext_resource type="Texture2D" uid="uid://cwgij8xvlt1vy" path="res://Art/Placeholder/Overworld_CharchingHubMap_PLACEHOLDER.png" id="7_5xbpb"]
+[ext_resource type="Texture2D" uid="uid://dn7k5mtieuje8" path="res://Art/Real/Rooms/Archive_Room_2_BG.png" id="8_7t346"]
 [ext_resource type="Texture2D" uid="uid://bdbam3m8dwbh0" path="res://Art/Placeholder/Overworld_GardenMap_Maze_PLACEHOLDER.png" id="8_b8lo2"]
 [ext_resource type="Texture2D" uid="uid://dorfnw82efd7r" path="res://Art/Real/Items/Overworld_Item_Altoids.png" id="10_b04k7"]
 [ext_resource type="Texture2D" uid="uid://cmj0g38gxfoad" path="res://Art/Real/Models/Mackenzie_Overworld_Sprite.png" id="11_f7cii"]
@@ -68,25 +68,22 @@ offset_bottom = 747.0
 texture = ExtResource("4_7k05w")
 
 [node name="Room1eBG" type="TextureRect" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("4_hua64")
+texture = ExtResource("6_i6f5c")
 
 [node name="Room2BG" type="TextureRect" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("5_47hwm")
 
 [node name="Room2eBG" type="TextureRect" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("6_b72fm")
+texture = ExtResource("8_7t346")
 
 [node name="Room3BG" type="TextureRect" parent="."]
 visible = false
